@@ -21,7 +21,7 @@ header {
   padding: 2rem 1rem;
 }
 
-header h1 {
+h1 {
   font-size: 3rem;
   background: linear-gradient(45deg, #ff8ae2, #c87fff);
   -webkit-background-clip: text;

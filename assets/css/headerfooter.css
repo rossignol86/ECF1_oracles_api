@@ -13,12 +13,6 @@ header {
     padding: 20px; /* facultatif, pour donner un peu d'espace autour */
 }
 
-.logo {
-    margin: 0 auto;
-    max-width: 250px;
-    height: auto;
-}
-
 
 /* Layout pour coller le footer en bas même si peu de contenu */
 body {
