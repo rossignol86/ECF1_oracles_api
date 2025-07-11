@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "Poiret One", sans-serif;
+    font-family: "Oswald", sans-serif;
     background: linear-gradient(120deg, #2c003e, #4b0082);
     color: #ffffff;
     min-height: 100vh;
@@ -16,22 +16,19 @@ body {
     background-size: cover;
 }
 
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
 h1 {
     font-family: "Manufacturing Consent", system-ui;
     font-weight: 200;
-    font-size: 10rem;
+    font-size: 8rem;
+    letter-spacing: 0.rem;
     color: #ffffff;
+    margin: 0 auto;
 }
 
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 2rem;
   width: 100%;
   max-width: 1200px;
@@ -41,7 +38,7 @@ h1 {
 .card {
   background: linear-gradient(135deg, #5a189a, #7b2cbf);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -54,9 +51,10 @@ h1 {
 }
 
 .card h2 {
-  margin-bottom: 0.5rem;
-  font-size: 2.5rem;
-  color: #ffddf4;
+    font-family: "Manufacturing Consent", system-ui;
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    color: #ffddf4;
 }
 
 .card p {
