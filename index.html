@@ -38,7 +38,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     </noscript>
     
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/headerfooter.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+
     <link rel="icon" href="favicon.ico">
 </head>
  
@@ -50,89 +52,21 @@
        </span>
    </header>
 
-   <body>
-        <main>
-            <div>
-                <h1>Développeur Web & Web mobile</h1>
-            </div>
-            <div class="conteneurblocs">
-                <div class="bloc1">
-                    <img class="blocimage" src="assets/images/api.webp" alt="Photo representant une demande de projet pour application mobile" width="400" height="300">
-                    <h2>Brief du projet <br> Landing page <br> vers les 2 API</h2>
-                    <div class="textbloc">
-                        <p>Creation d'une landing page. <br>    
-                        Creation d'une API Météo. <br>
-                        Creation d'une API Horoscope. <br>
-                        SEO et responsive obligatoire. <br>
-                        Design libre et professionnel attendu. <br>
-                        2 cards redirigeant vers les pages&nbsp;API. <br>
-                        Déploiement obligatoire (ftp&nbsp;ou&nbsp;CI/CD).
-                        </p>
-                    </div>
-                </div>
-                <div class="bloc1">
-                    <img class="blocimage" src="assets/images/applimeteo.webp" alt="Photo representant une main tenant un téléphone avec une application météo" width="400" height="300">
-                    <h2>Application <br> météo</h2>
-                    <div class="textbloc">
-                        <p>Consultez en un clic les prévisions détaillées de votre ville ou de n’importe quelle destination.
-                        Température, humidité, vent et ressenti sont mis à jour en temps réel grâce à une API fiable.
-                        L’interface claire vous permet de visualiser facilement le temps qu’il fera.</p>
-                        <a class="lienhtml" href="assets/pages/meteo.html"> Bienvenue sur notre application météo intuitive et rapide ! </a>
-                    </div>
-                </div>
-                <div class="bloc2">
-                    <img class="blocimage" src="assets/images/applihoroscope.webp" alt="Photo representant une main tenant un téléphone avec une application horoscope" width="400" height="300">
-                    <h2>Application <br> horoscope</h2>
-                    <div class="textbloc">
-                        <p>Sélectionnez votre signe du zodiaque et accédez instantanément à votre message du jour.
-                        Amour, travail, santé… tous les domaines de votre vie sont explorés.
-                        Les prédictions sont claires, motivantes et mises à jour quotidiennement via une API fiable.</p>
-                        <a class="lienhtml" href="assets/pages/horoscope.html"> Astrologie et bien-être s’invitent dans votre quotidien, cliquez ici ! </a>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </main>
-   </body>
+   <main>
+    
+   </main>
 
-  <!-- Footer -->
+
   <footer class="footer-content">
     <div>
-      
-        <a href="./assets/pages/meteo.html">Votre météo</a> -
-        <a href="./assets/pages/horoscope.html">Votre horoscope</a> -
-        <a href="./assets/pages/apropos.html">A&nbsp;propos</a>&nbsp;-&nbsp;
-        <a href="./assets/pages/mentionslegales.html">Mentions légales</a> <br>
-
-        <a href="https://rossignolfranck.alwaysdata.net/portfolio/" target="_blank">Franck Rossignol</a> – Maquette réalisé sur FIGMA – Développé sur Visual Studio Code <br>
-        Cette Landing page est dédié a la création d'application web et web mobile Météo et Horoscope<br>
-        &copy;Landing page Franck Rossignol - Afpa - 2025 – Tous droits réservés – 
+     <a href="https://rossignol86.github.io/FranckRossignol/" target="_blank">Franck Rossignol</a> – Maquette réalisé sur FIGMA – Développé sur Visual Studio Code <br>
+    Cette Landing page est dédié a la création d'application web et web mobile Météo et Horoscope<br>
+    &copy;Landing page Franck Rossignol - Afpa - 2025 – Tous droits réservés – 
 
       </span>
     </div>
   </footer>
 
-   <!-- Bannière RGPD de cookies -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>Ce site utilise des cookies pour améliorer votre expérience. 
-       <a href="/politique-confidentialite.html" target="_blank">En savoir plus</a>.
-    </p>
-    <button id="accept-cookies">Accepter</button>
-  </div>
-
-
-  <script>
-   // JS cookie banner ajusté
-    if (!localStorage.getItem("cookiesAccepted")) {
-    document.getElementById("cookie-banner").classList.add("active");
-    }
-
-    document.getElementById("accept-cookies").addEventListener("click", function () {
-    localStorage.setItem("cookiesAccepted", "true");
-    document.getElementById("cookie-banner").classList.remove("active");
-    });
-
-  </script>
     
 </body>
 </html>
