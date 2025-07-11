@@ -1,75 +1,71 @@
-main.container {
-  flex: 1;
-  padding: 20px;
+/* Reset et base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(120deg, #2c003e, #4b0082);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ff8ae2, #c87fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
-}
-
-h1 {
-  font-family: 'Amarante', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-button#btn-load {
-  background: #ffcc00;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-size: 16px;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button#btn-load:hover {
-  background: #ff9900;
-  transform: scale(1.05);
-}
-
-.loader {
-  margin: 30px auto;
-  border: 5px solid rgba(255,255,255,0.3);
-  border-top: 5px solid #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
-}
-
-.hidden {
-  display: none;
-}
-
-.cards-grid {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
+  background: linear-gradient(135deg, #5a189a, #7b2cbf);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
-.error {
-  color: #ffcc00;
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 18px;
+.card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #ffddf4;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #e0b3ff;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-top: auto;
 }
