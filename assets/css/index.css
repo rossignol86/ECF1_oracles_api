@@ -23,10 +23,9 @@ header {
 
 h1 {
     font-family: "Manufacturing Consent", system-ui;
-    font-size: 4rem;
-    background: linear-gradient(45deg, #ff8ae2, #c87fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 200;
+    font-size: 10rem;
+    color: #ffffff;
 }
 
 .cards-container {
