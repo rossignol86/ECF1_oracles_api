@@ -47,28 +47,30 @@ function afficherHoroscope(signe) {
         "Sagittaire": "♐️", "Capricorne": "♑️", "Verseau": "♒️", "Poissons": "♓️"
     }[signe];
 
-    const images = {
-        "Bélier": "../images/belier.jpg",
-        "Taureau": "../images/taureau.jpg",
-        "Gémeaux": "../images/gemeaux.jpg",
-        "Cancer": "../images/cancer.jpg",
-        "Lion": "../images/lion.jpg",
-        "Vierge": "../images/vierge.jpeg",
-        "Balance": "../images/balance.jpg",
-        "Scorpion": "../images/scorpion.jpg",
-        "Sagittaire": "../images/sagitaire.jpg",
-        "Capricorne": "../images/capricorne.jpg",
-        "Verseau": "../images/verseau.jpg",
-        "Poissons": "../images/poisson.jpg"
-    };
-
-    const imageSrc = images[signe];
-
     resultDiv.innerHTML = `
         <div class="card">
             <h2>${emoji} ${signe}</h2>
-            <img src="${imageSrc}" alt="${signe}" class="signe-image" />
+            
             <p>${message}</p>
         </div>
     `;
 }
+
+
+    // const images = {
+    //     "Bélier": "../images/belier.jpg",
+    //     "Taureau": "../images/taureau.jpg",
+    //     "Gémeaux": "../images/gemeaux.jpg",
+    //     "Cancer": "../images/cancer.jpg",
+    //     "Lion": "../images/lion.jpg",
+    //     "Vierge": "../images/vierge.jpeg",
+    //     "Balance": "../images/balance.jpg",
+    //     "Scorpion": "../images/scorpion.jpg",
+    //     "Sagittaire": "../images/sagitaire.jpg",
+    //     "Capricorne": "../images/capricorne.jpg",
+    //     "Verseau": "../images/verseau.jpg",
+    //     "Poissons": "../images/poisson.jpg"
+    // };
+
+    // const imageSrc = images[signe];
+ //<img src="${imageSrc}" alt="${signe}" class="signe-image" />
