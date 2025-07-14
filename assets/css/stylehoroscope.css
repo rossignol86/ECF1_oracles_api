@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FOND ET TYPO */
+html, body {
+    margin: 0 auto ;
+    height: 100%;
+    font-family: "Roboto Flex", sans-serif;
+    background: url('../images/signes/star.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* HEADER & LOGO */
+.logo {
+    margin: 0 auto;
+  max-width: 300px;
+}
+
+img.logo {
+  width: 100%;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* TITRE */
+h1 {
+    color: #ffd700;
+    font-family: "Amarante", serif;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+h3 {
+    color: #ffffff;
+    font-family: "Amarante", serif;
+    font-size: 2rem;
+    margin: 3rem;
+
+}
+
+.selecteur{
+    color: #000000;
+    font-family: "Amarante", serif;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* MAIN */
+main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* CONTAINER DES CARTES */
+#cards-container {
+    width: 80%;
+    margin-top: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#resultat-horoscope{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* CARTE HOROSCOPE */
+.card {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 600px;
+    background-color: #fff;
+    border-left: 8px solid #fbc2eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre du signe */
+.card h2 {
+  font-family: "Amarante", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #37474f;
+}
+
+/* Texte du message */
+.card p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* PASTEL VARIÉES POUR LES CARTES - AJOUT DYNAMIQUE EN JS */
+.card[data-color="rose"] { border-left-color: #f8bbd0; }
+.card[data-color="bleu"] { border-left-color: #b3e5fc; }
+.card[data-color="vert"] { border-left-color: #c8e6c9; }
+.card[data-color="jaune"] { border-left-color: #fff9c4; }
+.card[data-color="violet"] { border-left-color: #e1bee7; }
+.card[data-color="corail"] { border-left-color: #ffccbc; }
+
+
+.signe-image {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+
+
+/* FOOTER BLOQUÉ EN BAS */
+footer {
+  background-color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content a {
+  color: #f66960;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+  @media screen and (max-width: 600px) {
+  #cards-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  }
+
+  .card {
+  width: 90%;
+  }
+
+  .signe-image {
+  width: 100%;
+  }
+
+}
