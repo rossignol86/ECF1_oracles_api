@@ -3,11 +3,34 @@ const resultDiv = document.getElementById("resultat-horoscope");
 
 let horoscopeData = null; // Stockage en cache pour éviter plusieurs appels
 
+const aujourdHui = new Date();
+const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+const dateFormatee = aujourdHui.toLocaleDateString('fr-FR', options);
+
+document.getElementById("date-jour").textContent = "  " + dateFormatee;
+
+// Tableau des fonds d'écran par signe
+const backgroundImages = {
+    "Bélier": "url('assets/images/signes/belier.jpg')",
+    "Taureau": "url('assets/images/signes/taureau.jpg')",
+    "Gémeaux": "url('assets/images/signes/gemeaux.jpg')",
+    "Cancer": "url('assets/images/signes/cancer.jpg')",
+    "Lion": "url('assets/images/signes/lion.jpg')",
+    "Vierge": "url('assets/images/signes/vierge.jpeg')",
+    "Balance": "url('assets/images/signes//balance.jpg')",
+    "Scorpion": "url('assets/images/signes/scorpion.jpg')",
+    "Sagittaire": "url('assets/images/signes/sagitaire.jpg')",
+    "Capricorne": "url('assets/images/signes/capricorne.jpg')",
+    "Verseau": "url('assets/images/signes/verseau.jpg')",
+    "Poissons": "url('assets/images/signes/poissons.jpg')"
+};
+
 select.addEventListener("change", () => {
     const selectedSign = select.value;
 
     if (!selectedSign) {
         resultDiv.innerHTML = "";
+        document.body.style.backgroundImage = ""; // Retire le fond si aucun signe sélectionné
         return;
     }
 
@@ -39,8 +62,17 @@ select.addEventListener("change", () => {
 });
 
 function afficherHoroscope(signe) {
+    // Changer l'image de fond
+    const backgroundUrl = backgroundImages[signe];
+    if (backgroundUrl) {
+        document.body.style.backgroundImage = backgroundUrl;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
+    }
+
     const message = horoscopeData[signe];
-    
+
     const emoji = {
         "Bélier": "♈️", "Taureau": "♉️", "Gémeaux": "♊️", "Cancer": "♋️",
         "Lion": "♌️", "Vierge": "♍️", "Balance": "♎️", "Scorpion": "♏️",
@@ -50,27 +82,7 @@ function afficherHoroscope(signe) {
     resultDiv.innerHTML = `
         <div class="card">
             <h2>${emoji} ${signe}</h2>
-            
             <p>${message}</p>
         </div>
     `;
 }
-
-
-    // const images = {
-    //     "Bélier": "../images/belier.jpg",
-    //     "Taureau": "../images/taureau.jpg",
-    //     "Gémeaux": "../images/gemeaux.jpg",
-    //     "Cancer": "../images/cancer.jpg",
-    //     "Lion": "../images/lion.jpg",
-    //     "Vierge": "../images/vierge.jpeg",
-    //     "Balance": "../images/balance.jpg",
-    //     "Scorpion": "../images/scorpion.jpg",
-    //     "Sagittaire": "../images/sagitaire.jpg",
-    //     "Capricorne": "../images/capricorne.jpg",
-    //     "Verseau": "../images/verseau.jpg",
-    //     "Poissons": "../images/poisson.jpg"
-    // };
-
-    // const imageSrc = images[signe];
- //<img src="${imageSrc}" alt="${signe}" class="signe-image" />

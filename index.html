@@ -31,12 +31,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- preload + onload = chargement non bloquant -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-    </noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
     
     <link rel="stylesheet" href="assets/css/stylehoroscope.css">
     <link rel="icon" href="favicon.ico">
@@ -45,13 +43,14 @@
 <body>
 
     <header class="navbar">
-        <span>
-           <img class="logo" src="../images/logo.png" alt="Logo de Franck Rossignol représentant une illustration avec un oiseau sur une fenetre exterieure donnant sur un parc">
-       </span>
-    </header>
+    <h1>
+        Horoscope Oracle du <span id="date-jour"></span>
+    </h1>
+</header>
+
     <main>
         <section>
-            <h1>Horoscope Oracle du Jour</h1>
+            
 
             <label for="signe"> <h3>Choisissez votre signe :</h3> </label>
 
@@ -79,10 +78,8 @@
     <footer class="footer-content">
         <div>
             <a href="https://rossignolfranck.alwaysdata.net/portfolio/" target="_blank">Franck Rossignol</a> – Développé sur Visual Studio Code <br>
-            Ce site est dédié a la création d'une application web et web Horoscope<br>
-            &copy;Franck Rossignol - Afpa - 2025 – Tous droits réservés – 
-
-        </span>
+            Sujet Officiel - ECF Front-End DWWM 2025 - Ce site est dédié a la création d'une application web et web Horoscope<br>
+            &copy;Franck Rossignol - Afpa - 2025 – Tous droits réservés
         </div>
     </footer>
 
