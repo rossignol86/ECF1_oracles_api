@@ -1,111 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <!-- Balises de base SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Météo Horoscope du Jour – Prévisions astrologie gratuite</title>
-    <meta name="description" content="Franck Rossignol - Consultez et Découvrez votre horoscope du jour selon votre signe astrologique. Une application simple, rapide et responsive.">
+    <title>Page de votre horoscope du jour – Prévisions météo et astrologie gratuite</title>
+    <meta name="description" content="Consultez la météo locale en temps réel et découvrez votre horoscope du jour selon votre signe astrologique. Une application simple, rapide et responsive.">
     <meta name="google-site-verification" content="r2jc3Crw5u_mIby6E9WVARLgohCPE_Mp8QmePdNw3JQ" />
 
     <!-- Balises pour le référencement par thème -->
-    <meta name="keywords" content="Franck Rossignol - horoscope, horoscope quotidien, astrologie, application horoscope, signes astrologiques gratuite, astrologies responsive, astrologie en ligne">
+    <meta name="keywords" content="météo, horoscope, météo du jour, horoscope quotidien, météo en ligne, astrologie, prévisions météo, application météo, application horoscope, signes astrologiques, météo gratuite, météo responsive, astrologie en ligne">
 
     <meta name="author" content="Franck Rossignol">
     <meta name="robots" content="index, follow">
 
     <!-- Pour le partage sur les réseaux sociaux (Open Graph / Facebook / LinkedIn) -->
-    <meta property="og:title" content="Franck Rossignol - Horoscope du Jour – Horoscope en ligne">
-    <meta property="og:description" content="Franck Rossignol - Découvrez chaque jour votre horoscope personnalisé selon votre signe astrologique.">
+    <meta property="og:title" content="Météo Horoscope du Jour – Météo & Horoscope en ligne">
+    <meta property="og:description" content="Découvrez chaque jour la météo locale et votre horoscope personnalisé selon votre signe astrologique.">
+    <meta property="og:image" content="https://rossignol-franck-meteo-horoscope.sidathsoeun.fr/assets/images/logorossignol.webp"> <!-- à personnaliser -->
     <meta property="og:url" content="https://rossignol-franck-meteo-horoscope.sidathsoeun.fr">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Franck Rossignol -  Horoscope du Jour – Horoscope du jour">
-    <meta name="twitter:description" content="Franck Rossignol - Application horoscope quotidienne. Simple, rapide, responsive.">
-    <meta name="twitter:image" content=""> <!-- idem -->
+    <meta name="twitter:title" content="Météo Horoscope du Jour – Météo & Horoscope du jour">
+    <meta name="twitter:description" content="Application météo et horoscope quotidienne. Simple, rapide, responsive.">
+    <meta name="twitter:image" content="https://rossignol-franck-meteo-horoscope.sidathsoeun.fr/assets/images/logorossignol.webp"> <!-- idem -->
  
+    <!-- préconnects (tu les as déjà, on garde) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
-    <link rel="stylesheet" href="assets/css/headerfooter.css">
-        <link rel="stylesheet" href="assets/css/index.css">
-
+    <!-- preload + onload = chargement non bloquant -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <link rel="stylesheet" href="../css/stylehoroscope.css">
     <link rel="icon" href="favicon.ico">
+
 </head>
- 
 <body>
 
-    <header>
-        <h1>Oracle du Zodiaque</h1>
+    <header class="navbar">
+        <span>
+           <img class="logo" src="../images/logo.png" alt="Logo de Franck Rossignol représentant une illustration avec un oiseau sur une fenetre exterieure donnant sur un parc">
+       </span>
     </header>
+    <main>
+        <section>
+            <h1>Consultez votre horoscope</h1>
 
-    <main class="cards-container">
-        <div class="card">
-            <h2>Bélier</h2>
-            <p>21 mars - 19 avril</p>
-        </div>
-        <div class="card">
-            <h2>Taureau</h2>
-            <p>20 avril - 20 mai</p>
-        </div>
-        <div class="card">
-            <h2>Gémeaux</h2>
-            <p>21 mai - 20 juin</p>
-        </div>
-        <div class="card">
-            <h2>Cancer</h2>
-            <p>21 juin - 22 juillet</p>
-        </div>
-        <div class="card">
-            <h2>Lion</h2>
-            <p>23 juillet - 22 août</p>
-        </div>
-        <div class="card">
-            <h2>Vierge</h2>
-            <p>23 août - 22 septembre</p>
-        </div>
-        <div class="card">
-            <h2>Balance</h2>
-            <p>23 septembre - 22 octobre</p>
-        </div>
-        <div class="card">
-            <h2>Scorpion</h2>
-            <p>23 octobre - 21 novembre</p>
-        </div>
-        <div class="card">
-            <h2>Sagittaire</h2>
-            <p>22 novembre - 21 décembre</p>
-        </div>
-        <div class="card">
-            <h2>Capricorne</h2>
-            <p>22 décembre - 19 janvier</p>
-        </div>
-        <div class="card">
-            <h2>Verseau</h2>
-            <p>20 janvier - 18 février</p>
-        </div>
-        <div class="card">
-            <h2>Poissons</h2>
-            <p>19 février - 20 mars</p>
-        </div>
+            <label for="signe"> <h3>Choisissez votre signe :</h3> </label>
+
+            <select class="selecteur" id="signe">
+                <option value="">-- Sélectionnez un signe --</option>
+                <option value="Bélier">♈️ Bélier</option>
+                <option value="Taureau">♉️ Taureau</option>
+                <option value="Gémeaux">♊️ Gémeaux</option>
+                <option value="Cancer">♋️ Cancer</option>
+                <option value="Lion">♌️ Lion</option>
+                <option value="Vierge">♍️ Vierge</option>
+                <option value="Balance">♎️ Balance</option>
+                <option value="Scorpion">♏️ Scorpion</option>
+                <option value="Sagittaire">♐️ Sagittaire</option>
+                <option value="Capricorne">♑️ Capricorne</option>
+                <option value="Verseau">♒️ Verseau</option>
+                <option value="Poissons">♓️ Poissons</option>
+            </select>
+
+            <div class="resultat" id="resultat-horoscope"></div>
+        </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer-content">
+        <div>
+            <a href="https://rossignolfranck.alwaysdata.net/portfolio/" target="_blank">Franck Rossignol</a> – Développé sur Visual Studio Code <br>
+            Ce site est dédié a la création d'une application web et web Horoscope<br>
+            &copy;Franck Rossignol - Afpa - 2025 – Tous droits réservés – 
 
-  <footer class="footer-content">
-    <div>
-     <a href="https://rossignol86.github.io/FranckRossignol/" target="_blank">Franck Rossignol</a> – Maquette réalisé sur FIGMA – Développé sur Visual Studio Code <br>
-    Cette Landing page est dédié a la création d'application web et web mobile Météo et Horoscope<br>
-    &copy;Landing page Franck Rossignol - Afpa - 2025 – Tous droits réservés – 
+        </span>
+        </div>
+    </footer>
 
-      </span>
-    </div>
-  </footer>
+    <script src="../js/horoscope.js"></script>
 
-    
 </body>
 </html>
