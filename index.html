@@ -4,28 +4,28 @@
     <!-- Balises de base SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de votre horoscope du jour – Prévisions météo et astrologie gratuite</title>
-    <meta name="description" content="Consultez la météo locale en temps réel et découvrez votre horoscope du jour selon votre signe astrologique. Une application simple, rapide et responsive.">
-    <meta name="google-site-verification" content="r2jc3Crw5u_mIby6E9WVARLgohCPE_Mp8QmePdNw3JQ" />
+    <title>Page de votre horoscope du jour – Prévisions astrologie gratuite</title>
+    <meta name="description" content="Consultez votre horoscope du jour selon votre signe astrologique. Une application simple, rapide et responsive.">
+    
 
     <!-- Balises pour le référencement par thème -->
-    <meta name="keywords" content="météo, horoscope, météo du jour, horoscope quotidien, météo en ligne, astrologie, prévisions météo, application météo, application horoscope, signes astrologiques, météo gratuite, météo responsive, astrologie en ligne">
+    <meta name="keywords" content="horoscope, horoscope du jour, horoscope quotidien, horoscope en ligne, astrologie, prévisions astrologiques, application astrologique, application horoscope, signes astrologiques, horoscope gratuite, horoscope responsive, astrologie en ligne">
 
     <meta name="author" content="Franck Rossignol">
     <meta name="robots" content="index, follow">
 
     <!-- Pour le partage sur les réseaux sociaux (Open Graph / Facebook / LinkedIn) -->
-    <meta property="og:title" content="Météo Horoscope du Jour – Météo & Horoscope en ligne">
-    <meta property="og:description" content="Découvrez chaque jour la météo locale et votre horoscope personnalisé selon votre signe astrologique.">
-    <meta property="og:image" content="https://rossignol-franck-meteo-horoscope.sidathsoeun.fr/assets/images/logorossignol.webp"> <!-- à personnaliser -->
-    <meta property="og:url" content="https://rossignol-franck-meteo-horoscope.sidathsoeun.fr">
+    <meta property="og:title" content="Horoscope du Jour – Horoscope en ligne">
+    <meta property="og:description" content="Découvrez chaque jour votre horoscope personnalisé selon votre signe astrologique.">
+    <meta property="og:image" content="https://rossignol86.github.io/ECF1_oracles_api/assets/images/logorossignol.png"> <!-- à personnaliser -->
+    <meta property="og:url" content="https://rossignol86.github.io/ECF1_oracles_api/r">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Météo Horoscope du Jour – Météo & Horoscope du jour">
-    <meta name="twitter:description" content="Application météo et horoscope quotidienne. Simple, rapide, responsive.">
-    <meta name="twitter:image" content="https://rossignol-franck-meteo-horoscope.sidathsoeun.fr/assets/images/logorossignol.webp"> <!-- idem -->
+    <meta name="twitter:title" content="Horoscope du Jour – Horoscope en ligne">
+    <meta name="twitter:description" content="Application horoscope quotidienne. Simple, rapide, responsive.">
+    <meta name="twitter:image" content="https://rossignol86.github.io/ECF1_oracles_api/assets/images/logorossignol.png"> <!-- idem -->
  
     <!-- préconnects (tu les as déjà, on garde) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,28 +42,44 @@
 </head>
 <body>
     <!-- loader -->
-    <div id="loader" style="display: none;">
-        <img src="assets/images/logo/logo.png" alt="Logo" class="loader-logo">
+    <div id="loader" aria-hidden="true" style="display: none;">
+        <img src="assets/images/logo/logo.png" alt="Chargement en cours..." class="loader-logo">
     </div>
 
     <header class="navbar">
-    <h1>Horoscope&nbsp;Oracle</h1>
-    <span id="date-jour"></span>
-    <h2>Choisissez votre signe astral et&nbsp;découvrez les prévisions du jour</h2>
+        <h1>Horoscope&nbsp;Oracle</h1>
+        <span id="date-jour"></span>
+        <h2>Choisissez votre signe astral et&nbsp;découvrez les prévisions du jour</h2>
     </header>
 
-    <main>
+    <main role="main">
 
         <!-- Bouton de connexion à l'API -->
-        <section>
-            <button id="btn-tirer" class="btn-tirer">Tirer les 12 messages</button>
+        <!-- <section>
+            <button id="btn-tirer" class="btn-tirer" aria-label="Afficher les horoscopes des 12 signes astrologiques">Tirer les 12 messages</button>
             <pre id="resultat"></pre>
-        </section>
+        </section> -->
 
         <!-- conteneur pour les cartes -->
-        <section>
+        <!-- <section  aria-labelledby="titre-cartes">
+            <h4 id="titre-cartes" class="visually-hidden">Cartes des horoscopes par signe</h4>
             <div id="cartes-container" class="cartes-flex"></div>
+        </section> -->
+
+        <!-- Section unique pour le tirage et l'affichage des cartes -->
+        <section aria-labelledby="titre-cartes">
+        <h4 id="titre-cartes">Cartes des horoscopes par signe</h4>
+        
+        <button id="btn-tirer" class="btn-tirer" aria-label="Afficher les horoscopes des 12 signes astrologiques">
+            Tirer les 12 messages
+        </button>
+        
+        <pre id="resultat"></pre>
+
+        <div id="cartes-container" class="cartes-flex"></div>
         </section>
+
+        
 
     </main>
 

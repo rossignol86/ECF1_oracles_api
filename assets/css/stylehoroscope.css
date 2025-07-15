@@ -6,8 +6,7 @@
   font-family: "TikTok Sans", sans-serif;
 }
 
-
-/* loader logo oiseau */
+/* Loader logo oiseau */
 #loader {
   position: fixed;
   top: 0;
@@ -22,14 +21,14 @@
 }
 
 .loader-logo {
-  width: 0px;
+  width: 0;
   height: auto;
   animation: growLogo 1s infinite ease-in-out;
 }
 
 @keyframes growLogo {
   0% {
-    width: 0px;
+    width: 0;
     opacity: 0;
   }
   50% {
@@ -37,14 +36,10 @@
     opacity: 1;
   }
   100% {
-    width: 0px;
+    width: 0;
     opacity: 0;
   }
 }
-
-
-
-
 
 /* STRUCTURE GÉNÉRALE */
 html, body {
@@ -52,7 +47,6 @@ html, body {
 }
 
 body {
-  font-family: "TikTok Sans", sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -61,6 +55,7 @@ body {
   background-size: cover;
   color: #fefefe;
   text-align: center;
+  font-family: "TikTok Sans", sans-serif;
 }
 
 /* HEADER */
@@ -109,7 +104,6 @@ main {
 
 /* BOUTON */
 .btn-tirer {
-  font-family: "TikTok Sans", sans-serif;
   background: linear-gradient(45deg, #ffd700, #ffea70);
   color: #0c2340;
   border: none;
@@ -125,7 +119,6 @@ main {
 }
 
 .btn-tirer::before {
-
   content: "";
   position: absolute;
   top: 0;
@@ -139,7 +132,6 @@ main {
 
 .btn-tirer:hover::before {
   left: 130%;
-  font-weight: 900;
 }
 
 .btn-tirer:hover {
@@ -151,11 +143,25 @@ main {
 
 .btn-tirer:active {
   font-weight: 900;
-  animation: clickEffect 0.5s ease;
   background: linear-gradient(45deg, #ff8c00, #ffa500);
   color: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   transform: translateY(0);
+}
+
+/* TITRE H4 DES CARTES */
+h4#titre-cartes {
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-weight: 600;
+  text-align: center;
+  margin: 20px auto;
+  padding: 0.5rem 2rem;
+  max-width: 100%;
+  font-family: "Dancing Script", cursive;
+  color: #ffd700;
+  background: rgba(12, 35, 64, 0.7);
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 /* CONTAINER DES CARTES */
@@ -183,11 +189,10 @@ main {
 }
 
 .carte:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
-
 
 /* IMAGE DANS LA CARTE */
 .carte img {
@@ -200,7 +205,7 @@ main {
 /* TEXTE DANS LA CARTE */
 .carte h3 {
   margin: 0.8rem 1rem 0.4rem 1rem;
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw, 4rem);
   color: #0c2340;
   font-family: "Dancing Script", cursive;
 }
