@@ -43,19 +43,24 @@
 <body>
 
     <header class="navbar">
-    <h1>
-        Horoscope Oracle <span id="date-jour"></span>
-    </h1>
-    
-    <label for="signe"> <h3>Choisissez votre signe astral et&nbsp;découvrez les prévisions du jour</h3> </label>
-
+    <h1>Horoscope&nbsp;Oracle</h1>
+    <span id="date-jour"></span>
+    <h2>Choisissez votre signe astral et&nbsp;découvrez les prévisions du jour</h2>
     </header>
 
     <main>
-    <section>
-        <button id="tonBouton" class="btn-tirer">Tirer les 12 messages</button>
-        <pre id="resultat"></pre>
-    </section>
+
+        <!-- Bouton de connexion à l'API -->
+        <section>
+            <button id="btn-tirer" class="btn-tirer">Tirer les 12 messages</button>
+            <pre id="resultat"></pre>
+        </section>
+
+        <!-- conteneur pour les cartes -->
+        <section>
+            <div id="cartes-container" class="cartes-flex"></div>
+        </section>
+
     </main>
 
     <!-- Footer -->

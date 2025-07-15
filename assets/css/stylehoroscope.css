@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   background: radial-gradient(circle at center, #0c2340 0%, #081423 100%);
   background: url('../images/signes/zodiaque.jpeg') no-repeat center center fixed;
+  background-size: cover;
   color: #fefefe;
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -23,7 +24,7 @@ body {
 
 /* HEADER */
 header.navbar {
-  background-color:#0c2340;
+  background-color: #0c2340;
   margin-bottom: 20px;
   padding: 20px;
 }
@@ -31,29 +32,28 @@ header.navbar {
 /* TITRES */
 h1 {
   color: #ffffff;
-  font-size: 4.5rem;
-  line-height: 4 rem;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  line-height: 1.2;
   font-weight: 800;
-  margin: 0rem 0;
+  margin: 0;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 #date-jour {
-    color:  #ffd700;
-    text-transform: uppercase;
-    font-size: 4.5rem;
-    line-height: 3.5rem;
+  color: #ffd700;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  line-height: 1.4;
 }
 
-h3 {
+h2 {
   color: #ffffff;
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.4;
   font-weight: 200;
   margin-bottom: 1rem;
   letter-spacing: 0.1rem;
 }
-
 
 /* MAIN */
 main {
@@ -62,17 +62,18 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
+/* BOUTON */
 .btn-tirer {
   background: linear-gradient(45deg, #ffd700, #ffea70);
   color: #0c2340;
   border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1.8rem;
+  padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 5vw, 2.5rem);
+  font-size: clamp(1rem, 4vw, 1.8rem);
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
@@ -112,22 +113,64 @@ main {
   transform: translateY(0);
 }
 
+/* CONTAINER DES CARTES */
+.cartes-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+/* CARTE INDIVIDUELLE */
+.carte {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.carte:hover {
+  transform: scale(1.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
 
 
+/* IMAGE DANS LA CARTE */
+.carte img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
 
+/* TEXTE DANS LA CARTE */
+.carte h3 {
+  margin: 0.8rem 1rem 0.4rem 1rem;
+  font-size: 1.8rem;
+  color: #0c2340;
+}
 
+.carte p {
+  margin: 0 1rem 1rem 1rem;
+  font-size: 1.4rem;
+  color: #0c2340;
+  line-height: 1.4;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+/* flouter les autres cards */
+.cartes-flex:hover .carte:not(:hover) {
+  filter: blur(3px);
+  opacity: 0.3;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
 
 /* FOOTER */
 footer {
@@ -152,43 +195,18 @@ footer {
   text-decoration: underline;
 }
 
+/* MEDIA QUERIES RESPONSIVE */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 3.5rem;
-    margin: 0 auto;
+/* Tablettes */
+@media (min-width: 600px) {
+  .carte {
+    width: calc(50% - 2rem);
   }
-
-  #date-jour {
-    color:  #ffd700;
-    text-transform: uppercase;
-    font-size: 3rem;
 }
 
-  h3 {
-    font-size: 2rem;
-    line-height: 2.3rem;
-    padding-top: 1rem;
+/* Ordinateurs */
+@media (min-width: 1024px) {
+  .carte {
+    width: calc(33.333% - 2rem);
   }
-
-
 }
