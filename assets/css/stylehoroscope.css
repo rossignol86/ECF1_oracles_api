@@ -41,9 +41,9 @@ h1 {
 
 #date-jour {
   color: #ffd700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: clamp(1.5rem, 5vw, 2.5rem);
-  line-height: 1.4;
+  line-height: 5rem;
 }
 
 h2 {
@@ -120,6 +120,7 @@ main {
   gap: 2rem;
   padding: 2rem;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 /* CARTE INDIVIDUELLE */
@@ -168,7 +169,7 @@ main {
 /* flouter les autres cards */
 .cartes-flex:hover .carte:not(:hover) {
   filter: blur(3px);
-  opacity: 0.3;
+  opacity: 0;
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
