@@ -24,6 +24,7 @@ body {
 /* HEADER */
 header.navbar {
   background-color:#0c2340;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -53,7 +54,8 @@ h1 {
 h3 {
   color: #ffffff;
   font-size: 2rem;
-  margin: 2rem 0 1rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
 }
 
 /* SELECTEUR */
@@ -93,14 +95,14 @@ main {
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  margin: 2rem auto;
+  margin: 4rem auto;
 }
 
 /* CARTE HOROSCOPE */
 .card {
   background: linear-gradient(145deg, rgba(12,35,64,0.85), rgba(29,59,92,0.85));
   color: #ffd700;
-  width: 350px;
+  width: 500px;
   border: 2px solid #ffd700;
   border-radius: 1rem;
   padding: 2rem;
@@ -114,16 +116,15 @@ main {
 }
 
 .card h2 {
-  font-family: "Amarante", serif;
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: #ffd700;
   margin-bottom: 1rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 .card p {
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 1.5rem;
+  line-height: 1.8;
   color: #fff;
 }
 
@@ -170,7 +171,7 @@ footer {
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   h3 {
