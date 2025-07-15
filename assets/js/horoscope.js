@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const bouton = document.querySelector('#btn-tirer');
   bouton.addEventListener('click', () => {
+    showLoader();
     fetchHoroscope();
   });
 });
@@ -36,6 +37,11 @@ function fetchHoroscope() {
     })
     .catch(error => {
       console.error('Erreur lors de la requête API :', error);
+      document.querySelector('#cartes-container').innerHTML =
+        '<p>Erreur lors du chargement. Veuillez réessayer.</p>';
+    })
+    .finally(() => {
+      hideLoader();
     });
 }
 
@@ -43,7 +49,6 @@ function displayCards(horoscopeObj) {
   const container = document.getElementById('cartes-container');
   container.innerHTML = "";
 
-  // ✅ Table de correspondance signe → image
   const images = {
     Bélier: 'assets/images/signes/belier.jpg',
     Taureau: 'assets/images/signes/taureau.jpg',
@@ -72,5 +77,31 @@ function displayCards(horoscopeObj) {
     `;
 
     container.appendChild(card);
+  }
+}
+
+/**
+ * Affiche le loader animé
+ */
+function showLoader() {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.display = "flex";
+    loader.style.opacity = "1";
+    loader.style.pointerEvents = "auto";
+  }
+}
+
+/**
+ * Masque le loader animé
+ */
+function hideLoader() {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
   }
 }
