@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "TikTok Sans", sans-serif;
 }
 
 
@@ -51,6 +52,7 @@ html, body {
 }
 
 body {
+  font-family: "TikTok Sans", sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -59,7 +61,6 @@ body {
   background-size: cover;
   color: #fefefe;
   text-align: center;
-  font-family: "Oswald", sans-serif;
 }
 
 /* HEADER */
@@ -72,27 +73,26 @@ header.navbar {
 /* TITRES */
 h1 {
   color: #ffffff;
-  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-size: clamp(4rem, 4.5vw, 5rem);
   line-height: 1.2;
-  font-weight: 800;
+  font-weight: 200;
   margin: 0;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 #date-jour {
   color: #ffd700;
-  /* text-transform: uppercase; */
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(3.5rem, 4vw, 4.5rem);
   line-height: 5rem;
+  font-family: "Dancing Script", cursive;
 }
 
 h2 {
   color: #ffffff;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  line-height: 1.4;
+  line-height: 1.6;
   font-weight: 200;
   margin-bottom: 1rem;
-  letter-spacing: 0.1rem;
 }
 
 /* MAIN */
@@ -109,12 +109,13 @@ main {
 
 /* BOUTON */
 .btn-tirer {
+  font-family: "TikTok Sans", sans-serif;
   background: linear-gradient(45deg, #ffd700, #ffea70);
   color: #0c2340;
   border: none;
   padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 5vw, 2.5rem);
-  font-size: clamp(1rem, 4vw, 1.8rem);
-  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.8rem);
+  font-weight: 300;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -124,6 +125,7 @@ main {
 }
 
 .btn-tirer::before {
+
   content: "";
   position: absolute;
   top: 0;
@@ -137,15 +139,18 @@ main {
 
 .btn-tirer:hover::before {
   left: 130%;
+  font-weight: 900;
 }
 
 .btn-tirer:hover {
+  font-weight: 900;
   background: linear-gradient(45deg, #ffea70, #ffd700);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   transform: translateY(-4px);
 }
 
 .btn-tirer:active {
+  font-weight: 900;
   animation: clickEffect 0.5s ease;
   background: linear-gradient(45deg, #ff8c00, #ffa500);
   color: #ffffff;
@@ -195,15 +200,15 @@ main {
 /* TEXTE DANS LA CARTE */
 .carte h3 {
   margin: 0.8rem 1rem 0.4rem 1rem;
-  font-size: 1.8rem;
+  font-size: 4rem;
   color: #0c2340;
+  font-family: "Dancing Script", cursive;
 }
 
 .carte p {
   margin: 0 1rem 1rem 1rem;
   font-size: 1.4rem;
   color: #0c2340;
-  line-height: 1.4;
 }
 
 /* flouter les autres cards */
