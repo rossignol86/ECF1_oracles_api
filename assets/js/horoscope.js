@@ -50,23 +50,23 @@ function displayCards(horoscopeObj) {
   container.innerHTML = "";
 
   const images = {
-    Bélier: 'assets/images/signes/belier.jpg',
-    Taureau: 'assets/images/signes/taureau.jpg',
-    Gémeaux: 'assets/images/signes/gemeaux.jpg',
-    Cancer: 'assets/images/signes/cancer.jpg',
-    Lion: 'assets/images/signes/lion.jpg',
-    Vierge: 'assets/images/signes/vierge.jpeg',
-    Balance: 'assets/images/signes/balance.jpg',
-    Scorpion: 'assets/images/signes/scorpion.jpg',
-    Sagittaire: 'assets/images/signes/sagitaire.jpg',
-    Capricorne: 'assets/images/signes/capricorne.jpg',
-    Verseau: 'assets/images/signes/verseau.jpg',
-    Poissons: 'assets/images/signes/poisson.jpg'
+    Bélier: 'assets/images/signes/belier.webp',
+    Taureau: 'assets/images/signes/taureau.webp',
+    Gémeaux: 'assets/images/signes/gemeaux.webp',
+    Cancer: 'assets/images/signes/cancer.webp',
+    Lion: 'assets/images/signes/lion.webp',
+    Vierge: 'assets/images/signes/vierge.webp',
+    Balance: 'assets/images/signes/balance.webp',
+    Scorpion: 'assets/images/signes/scorpion.webp',
+    Sagittaire: 'assets/images/signes/sagitaire.webp',
+    Capricorne: 'assets/images/signes/capricorne.webp',
+    Verseau: 'assets/images/signes/verseau.webp',
+    Poissons: 'assets/images/signes/poisson.webp'
   };
 
   for (const signe in horoscopeObj) {
     const message = horoscopeObj[signe];
-    const imageUrl = images[signe] || 'assets/img/horoscope/default.jpg';
+    const imageUrl = images[signe] || 'assets/img/horoscope/zodiaque.webp';
 
     const card = document.createElement('div');
     card.classList.add('carte');

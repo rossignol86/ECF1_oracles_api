@@ -51,7 +51,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: radial-gradient(circle at center, #0c2340 0%, #081423 100%);
-  background: url('../images/signes/zodiaque.jpeg') no-repeat center center fixed;
+  background: url('../images/signes/zodiaque.webp') no-repeat center center fixed;
   background-size: cover;
   color: #fefefe;
   text-align: center;
@@ -189,7 +189,7 @@ h4#titre-cartes {
 }
 
 .carte:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
