@@ -6,6 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const bouton = document.querySelector('#btn-tirer');
   bouton.addEventListener('click', () => {
+    // ✨ Masquer l'intro avec effet fondu
+    const intro = document.getElementById("intro-container");
+    if (intro) {
+      intro.classList.add("fade-out");
+      setTimeout(() => {
+        intro.style.display = "none";
+      }, 500); // doit correspondre à la durée du CSS
+    }
+
     showLoader();
     fetchHoroscope();
   });
@@ -80,9 +89,6 @@ function displayCards(horoscopeObj) {
   }
 }
 
-/**
- * Affiche le loader animé
- */
 function showLoader() {
   const loader = document.getElementById("loader");
   if (loader) {
@@ -92,9 +98,6 @@ function showLoader() {
   }
 }
 
-/**
- * Masque le loader animé
- */
 function hideLoader() {
   const loader = document.getElementById("loader");
   if (loader) {
