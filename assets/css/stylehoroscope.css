@@ -77,25 +77,21 @@ h1 {
 
 #date-jour {
   color: #ffd700;
-  font-size: clamp(3.5rem, 4vw, 4.5rem);
-  line-height: 5rem;
+  font-size: 4rem;
+  margin: 1rem;
   font-family: "Dancing Script", cursive;
 }
 
 h2 {
   color: #ffffff;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  line-height: 1.6;
-  font-weight: 200;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-weight: 100;
+  margin: 1rem;
 }
 
-h4 {
-  color: #0c2340;
-  font-size: clamp(3rem, 3.5vw, 4rem);
-  line-height: 1.6;
-  font-weight: 200;
-  margin-bottom: 1rem;
+strong{
+  color: #0c2340 ;
+  font-weight: 900;
 }
 
 /* MAIN */
@@ -112,7 +108,7 @@ main {
 
 /* elle disparait quand on clique sur le bouton */
 #intro-container {
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 10px;
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -125,16 +121,17 @@ main {
 }
 
 #intro-container h5 {
-  margin: 0 1rem 1rem 1rem;
+  margin: 1rem;
   font-size: 2.5rem;
   color: #0c2340;
   font-weight: 200;
 }
 
 #intro-container p {
-  margin: 0 1rem 1rem 1rem;
-  font-size: 1.4rem;
+  margin: 1rem;
+  font-size: 1.2rem;
   color: #0c2340;
+  text-align: left;
 }
 
 /* BOUTON */
@@ -142,8 +139,9 @@ main {
   background: linear-gradient(45deg, #ffd700, #ffea70);
   color: #0c2340;
   border: none;
-  padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 5vw, 2.5rem);
-  font-size: clamp(1rem, 2vw, 1.8rem);
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-size: 2rem;
   font-weight: 300;
   border-radius: 10px;
   cursor: pointer;
@@ -186,12 +184,12 @@ main {
 
 /* TITRE H4 DES CARTES */
 h4#titre-cartes {
-  font-size: clamp(3rem, 4vw, 5rem);
+  font-size: 4rem;
   font-weight: 600;
   text-align: center;
   margin: 20px auto;
   padding: 0.5rem 2rem;
-  max-width: 100%;
+  max-width: 80%;
   font-family: "Dancing Script", cursive;
   color: #ffd700;
   background: rgba(12, 35, 64, 0.7);
@@ -279,16 +277,15 @@ h4#titre-cartes {
 footer {
   background: #0c2340;
   color: #ffd700;
-  padding: 1.5rem 1rem;
+  padding: 2rem;
   text-align: center;
   font-size: 1.2rem;
   border-top: 1px solid #ffd700;
-  margin-top: auto;
-  letter-spacing: 0.1rem;
 }
 
 .footer-content a {
   font-size: 1.2rem;
+  line-height: 2rem;
   color: #ffd700;
   text-decoration: none;
   font-weight: 600;
