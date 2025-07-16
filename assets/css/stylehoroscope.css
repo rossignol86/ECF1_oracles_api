@@ -90,7 +90,7 @@ h2 {
 }
 
 strong{
-  color: #0c2340 ;
+  color: #05499d ;
   font-weight: 900;
 }
 
@@ -121,7 +121,8 @@ main {
 }
 
 #intro-container h5 {
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
   font-size: 2.5rem;
   color: #0c2340;
   font-weight: 200;
@@ -228,13 +229,7 @@ h4#titre-cartes {
   z-index: 2;
 }
 
-/* désactiver le hover sur écrans tactiles */
-@media (hover: none) {
-  .carte:hover {
-    transform: none;
-    box-shadow: none;
-  }
-}
+
 
 /* IMAGE DANS LA CARTE */
 .carte img {
@@ -242,13 +237,6 @@ h4#titre-cartes {
   height: 250px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
-}
-
-/* images moins hautes sur mobile */
-@media (max-width: 599px) {
-  .carte img {
-    height: 180px;
-  }
 }
 
 /* TEXTE DANS LA CARTE */
@@ -295,20 +283,108 @@ footer {
   text-decoration: underline;
 }
 
-/* MEDIA QUERIES RESPONSIVE */
 
-/* Tablettes */
-@media (min-width: 600px) {
-  .carte {
-    width: calc(50% - 2rem);
+
+/* Responsive tablette (≥ 768px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
   }
 
+  #date-jour {
+    font-size: 3rem;
+  }
 
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h4#titre-cartes {
+    font-size: 3rem;
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-tirer {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .carte img {
+    height: 200px;
+  }
+
+  .carte h3 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+
+  .carte p {
+    font-size: 1.2rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
 }
 
-/* Ordinateurs */
-@media (min-width: 1024px) {
+/* Responsive mobile (≤ 767px) */
+@media (max-width: 767px) {
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  #date-jour {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4#titre-cartes {
+    font-size: 2.2rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+  }
+
+  .btn-tirer {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .cartes-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .carte {
-    width: calc(33.333% - 2rem);
+    max-width: 100%;
+  }
+
+  .carte img {
+    height: 180px;
+  }
+
+  .carte h3 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .carte p {
+    font-size: 1rem;
+  }
+
+  #intro-container p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .footer-content a {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
