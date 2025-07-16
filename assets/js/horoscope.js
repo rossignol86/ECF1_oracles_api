@@ -105,6 +105,6 @@ function hideLoader() {
     loader.style.pointerEvents = "none";
     setTimeout(() => {
       loader.style.display = "none";
-    }, 1500);
+    }, 500);
   }
 }
