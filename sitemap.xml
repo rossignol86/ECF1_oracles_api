@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://rossignol86.github.io/ECF1_oracles_api/</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://rossignol86.github.io/ECF1_oracles_api/index.html</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+   <!-- Page a propos-->
+  <url>
+  <loc>https://rossignol86.github.io/ECF1_oracles_api/assets/pages/apropos.html</loc>
+    <priority>0.3</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>
