@@ -11,17 +11,17 @@ Horoscope – Application Web Interactive
     Images : WebP, PNG
 
 🚀 Fonctionnalités
-    Écran de chargement animé (loader) avec logo animé en loop
     Page d’accueil responsive avec date du jour dynamique
     Introduction avec bouton pour lancer le tirage
-    Tirage aléatoire de cartes (image, titre et texte associés)
+    Écran de chargement animé (loader) avec logo animé en loop
+    Tirage de cartes (image, titre et texte associés)
     Effets visuels sur les cartes (scale, flou des cartes non survolées)
     Design responsive optimisé pour mobile, tablette et desktop
     Footer avec liens externes
 
 🌐 Lien vers le site en ligne
 ➡️ Lien vers Horoscope en ligne
-    https://rossignol86.github.io/ECF1_oracles_api/
+    https://ecf1-rossignol-franck.sidathsoeun.fr
 
 💻 Lien vers le dépôt GitHub
 ➡️ GitHub – Horoscope
@@ -32,11 +32,14 @@ Horoscope – Application Web Interactive
         /images
             /logo
             /signes
-        /fonts
-    /css
-        style.css
-    /js
-        script.js
+        /css
+            stylehoroscope.css
+        /js
+            horoscope.js
+        /maquettes
+            indexDesktop
+            indexMobile
+    favicon.ico
     index.html
     README.md
 
