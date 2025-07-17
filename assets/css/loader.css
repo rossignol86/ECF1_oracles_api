@@ -10,7 +10,7 @@
     top: 0; left: 0;
     width: 100%; height: 100%;
     /* background-color: #081423; */
-    background: url('../images/signes/zen.jpg') no-repeat center center fixed;
+    background: url('../images/signes/zodiaque.webp') no-repeat center center fixed;
     background-size: cover;
     display: none;
     justify-content: center;
@@ -26,13 +26,30 @@
     color: #ffffff;
 }
 
+.loader-content p {
+    font-family: "Dancing Script", cursive;
+    font-weight: 900;
+    font-size: 5rem; /* Ajuste la taille selon ton besoin */
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #ff8c00,
+        0 0 10px #ff8c00,
+        0 0 20px #ff8c00,
+        0 0 40px #ff8c00,
+        0 0 80px #ff8c00,
+        0 0 90px #ff8c00,
+        0 0 100px #ff8c00;
+}
+
+
 .spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #333;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #ff8c00;
     border-radius: 50%;
-    width: 40px; height: 40px;
+    width: 50px; height: 50px;
     animation: spin 1s linear infinite;
     margin: 0 auto;
+
 }
 
 @keyframes spin {

@@ -292,7 +292,7 @@ footer {
   }
 }
 
-/* Responsive mobile (≤ 767px) */
+/* Responsive mobile (≤ 767px) la largeur d’écran est inférieure ou égale à 767 pixels */
 @media (max-width: 767px) {
   h1 {
     font-size: clamp(2rem, 8vw, 3rem);

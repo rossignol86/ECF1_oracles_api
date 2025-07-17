@@ -29,7 +29,7 @@ function initLoader() {
     loader.innerHTML = `
       <div class="loader-content">
         <div class="spinner"></div>
-        <p>Chargement de votre horoscope...</p>
+        <p>Chargement de&nbsp;votre horoscope...</p>
       </div>
     `;
     document.body.appendChild(loader);
@@ -90,7 +90,7 @@ function fetchHoroscope() {
     })
     .finally(() => {
       const elapsed = Date.now() - startTime;
-      const minDuration = 3000;
+      const minDuration = 4000;
       const remainingTime = Math.max(0, minDuration - elapsed);
       setTimeout(hideLoader, remainingTime);
     });
