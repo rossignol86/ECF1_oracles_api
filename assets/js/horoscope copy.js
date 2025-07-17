@@ -4,17 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const dateFormatee = aujourdHui.toLocaleDateString('fr-FR', options);
   document.getElementById("date-jour").textContent = " " + dateFormatee;
 
-  // Crée dynamiquement le loader sans style (style dans CSS)
-  initLoader();
-
   const bouton = document.querySelector('#btn-tirer');
   bouton.addEventListener('click', () => {
+    // ✨ Masquer l'intro avec effet fondu
     const intro = document.getElementById("intro-container");
     if (intro) {
       intro.classList.add("fade-out");
       setTimeout(() => {
         intro.style.display = "none";
-      }, 500);
+      }, 500); // doit correspondre à la durée du CSS
     }
 
     showLoader();
@@ -22,48 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function initLoader() {
-  if (!document.getElementById('loader')) {
-    const loader = document.createElement('div');
-    loader.id = 'loader';
-    loader.innerHTML = `
-      <div class="loader-content">
-        <div class="spinner"></div>
-        <p>Chargement de votre horoscope...</p>
-      </div>
-    `;
-    document.body.appendChild(loader);
-  }
-}
-
-function showLoader() {
-  const loader = document.getElementById("loader");
-  if (loader) {
-    loader.style.display = "flex";
-    requestAnimationFrame(() => {
-      loader.style.opacity = "1";
-      loader.style.pointerEvents = "auto";
-    });
-  }
-}
-
-function hideLoader() {
-  const loader = document.getElementById("loader");
-  if (loader) {
-    loader.style.opacity = "0";
-    loader.style.pointerEvents = "none";
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 1000);
-  }
-}
-
 function fetchHoroscope() {
   const apiKey = 'SI_DART_Sun_api_keys_!598254741369!excalibure!paramKeysOracle!887782secretNum&5882!';
   const url = 'https://oracles-api.sidathsoeun.fr/oracle_api.php';
-  const body = { api_key: apiKey };
 
-  const startTime = Date.now();
+  const body = { api_key: apiKey };
 
   fetch(url, {
     method: 'POST',
@@ -89,10 +50,7 @@ function fetchHoroscope() {
         '<p>Erreur lors du chargement. Veuillez réessayer.</p>';
     })
     .finally(() => {
-      const elapsed = Date.now() - startTime;
-      const minDuration = 3000;
-      const remainingTime = Math.max(0, minDuration - elapsed);
-      setTimeout(hideLoader, remainingTime);
+      hideLoader();
     });
 }
 
@@ -126,6 +84,27 @@ function displayCards(horoscopeObj) {
       <h3>${signe}</h3>
       <p>${message}</p>
     `;
+
     container.appendChild(card);
+  }
+}
+
+function showLoader() {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.display = "flex";
+    loader.style.opacity = "1";
+    loader.style.pointerEvents = "auto";
+  }
+}
+
+function hideLoader() {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
   }
 }
